@@ -25,44 +25,54 @@ CHEM est apolitique, sans appartenance confessionnelle ni tribale. Elle **soigne
 
 ## Contenu du site
 
-| Page | Description |
-|---|---|
-| `index.html` | Accueil : présentation, mission, repères et champ d'action |
-| `organisation.html` | Présentation, historique, vision, mission, mandat, principes, gouvernance et emblème |
-| `action.html` | Objectifs, domaines d'intervention, façon d'intervenir et priorités |
-| `contact.html` | Coordonnées du siège et informations sur les partenariats |
+| Page | Français | Anglais |
+|---|---|---|
+| Accueil | `src/index.html` | `src/en/index.html` |
+| L'organisation | `src/organisation.html` | `src/en/organisation.html` |
+| Notre action | `src/action.html` | `src/en/action.html` |
+| Contact | `src/contact.html` | `src/en/contact.html` |
 
 ## Structure du projet
 
+Le site est généré avec [Eleventy](https://www.11ty.dev/) : on modifie les fichiers de `src/`,
+Eleventy produit le site final dans `_site/` (jamais modifié à la main, jamais commité).
+
 ```
 .
-├── index.html
-├── organisation.html
-├── action.html
-├── contact.html
-├── assets/
-│   └── logo.png
-├── css/
-│   └── style.css
-└── js/
-    └── site.js
+├── src/
+│   ├── _includes/
+│   │   ├── base.njk       # <head> commun, liens hreflang FR/EN
+│   │   ├── header.njk     # En-tête et menu (une seule copie pour tout le site)
+│   │   └── footer.njk     # Pied de page
+│   ├── _data/
+│   │   ├── site.json      # Adresse publique du site
+│   │   └── t.json         # Textes du menu et du pied de page, en français et en anglais
+│   ├── index.html, organisation.html, action.html, contact.html   # Pages françaises
+│   ├── en/                # Pages anglaises (mêmes noms de fichiers)
+│   ├── sitemap.njk        # → sitemap.xml
+│   ├── assets/, css/, js/ # Copiés tels quels
+├── scripts/verifier-site.py   # Vérification des liens internes et des pages FR/EN
+├── .github/workflows/site.yml # Compilation, vérification et publication sur GitHub Pages
+├── eleventy.config.js
+└── package.json
 ```
 
-Site statique en HTML, CSS et JavaScript, sans dépendance ni étape de compilation.
+Chaque page commence par un en-tête (titre, description…) suivi du contenu de la page. Une page
+française et sa traduction portent le même nom de fichier : le bouton **EN / FR** du menu passe de
+l'une à l'autre.
 
 ## Voir le site en local
 
-Ouvrir `index.html` dans un navigateur, ou lancer un petit serveur local depuis le dossier du projet :
-
 ```bash
-python -m http.server 8000
+npm install     # une seule fois
+npm start       # http://localhost:8080
 ```
-
-puis aller sur <http://localhost:8000>.
 
 ## Mise en ligne
 
-Le site peut être publié avec **GitHub Pages** : *Settings → Pages → Deploy from a branch → `main` / `(root)`*.
+Le site est publié sur **GitHub Pages** par GitHub Actions : à chaque `git push` sur `main`, le site est
+compilé, les liens sont vérifiés, puis le site est publié. Réglage à faire une seule fois :
+*Settings → Pages → Build and deployment → Source : **GitHub Actions***.
 
 ---
 

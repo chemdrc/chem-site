@@ -1,6 +1,9 @@
 # Dépendances
 node_modules/
 
+# Site généré par Eleventy (reconstruit par GitHub Actions)
+_site/
+
 # Cloudflare / Wrangler
 .wrangler/
 .dev.vars

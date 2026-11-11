@@ -1,66 +1,41 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CHEM — Congo Health Emergency</title>
-  <meta name="description" content="Congo Health Emergency (CHEM) est une organisation humanitaire médicale à but non lucratif, constituée à Bukavu, au Sud-Kivu. Devise : Santé pour les nécessiteux.">
-  <meta name="theme-color" content="#0000b0">
-  <meta property="og:title" content="CHEM — Congo Health Emergency">
-  <meta property="og:description" content="Organisation humanitaire médicale constituée à Bukavu. Santé pour les nécessiteux.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <link rel="icon" href="assets/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "Congo Health Emergency",
-    "alternateName": "CHEM",
-    "slogan": "Santé pour les nécessiteux",
-    "email": "congohealthemergency.drc@gmail.com",
-    "telephone": ["+243821505083", "+243851505083", "+243998291126"],
-    "foundingDate": "2021-12-31",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Bukavu, Sud-Kivu, République démocratique du Congo"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Avenue Saïo, Quartier Ndendere, Commune d'Ibanda",
-      "addressLocality": "Bukavu",
-      "addressRegion": "Sud-Kivu",
-      "addressCountry": "CD"
-    },
-    "areaServed": "CD"
-  }
-  </script>
-</head>
-<body>
-  <a class="skip" href="#contenu">Aller au contenu</a>
-  <header class="site-header">
-    <div class="tricolor" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="header-bar wrap">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="" width="379" height="353">
-        <span>
-          <strong>Congo Health Emergency</strong>
-          <small>CHEM · R.D. Congo</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-      </button>
-      <nav class="site-nav" id="nav" aria-label="Navigation principale">
-        <a href="index.html" aria-current="page">Accueil</a>
-        <a href="organisation.html">L'organisation</a>
-        <a href="action.html">Notre action</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
+---
+layout: "base.njk"
+lang: "fr"
+translationKey: "home"
+nav: "home"
+permalink: "index.html"
+title: "CHEM — Congo Health Emergency"
+description: "Congo Health Emergency (CHEM) est une organisation humanitaire médicale à but non lucratif, constituée à Bukavu, au Sud-Kivu. Devise : Santé pour les nécessiteux."
+headExtra: |
+    <meta property="og:title" content="CHEM — Congo Health Emergency">
+    <meta property="og:description" content="Organisation humanitaire médicale constituée à Bukavu. Santé pour les nécessiteux.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Congo Health Emergency",
+      "alternateName": "CHEM",
+      "slogan": "Santé pour les nécessiteux",
+      "email": "congohealthemergency.drc@gmail.com",
+      "telephone": ["+243821505083", "+243851505083", "+243998291126"],
+      "foundingDate": "2021-12-31",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Bukavu, Sud-Kivu, République démocratique du Congo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenue Saïo, Quartier Ndendere, Commune d'Ibanda",
+        "addressLocality": "Bukavu",
+        "addressRegion": "Sud-Kivu",
+        "addressCountry": "CD"
+      },
+      "areaServed": "CD"
+    }
+    </script>
+---
   <main id="contenu">
     <section class="hero">
       <div class="hero-text">
@@ -170,42 +145,3 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <img src="assets/logo.png" alt="" width="72" height="67">
-        <p class="footer-name">Congo Health Emergency</p>
-        <p>Organisation humanitaire médicale à but non lucratif. Apolitique, sans appartenance confessionnelle ni tribale.</p>
-      </div>
-      <div>
-        <p class="footer-label">Siège</p>
-        <address>
-          Avenue Saïo<br>
-          Quartier Ndendere, commune d'Ibanda<br>
-          Bukavu, Sud-Kivu<br>
-          R.D. Congo
-        </address>
-      </div>
-      <div>
-        <p class="footer-label">Contact</p>
-        <ul class="footer-links">
-          <li><a href="tel:+243821505083">+243 821 505 083</a></li>
-          <li><a href="tel:+243851505083">+243 851 505 083</a></li>
-          <li><a href="tel:+243998291126">+243 998 291 126</a></li>
-          <li><a href="mailto:congohealthemergency.drc@gmail.com">congohealthemergency.drc@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrap footer-base">
-      <p>© CHEM · Constituée à Bukavu le 31 décembre 2021</p>
-      <nav aria-label="Pied de page">
-        <a href="organisation.html">L'organisation</a>
-        <a href="action.html">Notre action</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </footer>
-  <script src="js/site.js"></script>
-</body>
-</html>

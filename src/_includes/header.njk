@@ -1,0 +1,22 @@
+  <header class="site-header">
+    <div class="tricolor" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="header-bar wrap">
+      <a class="brand" href="index.html">
+        <img src="{{ root }}assets/logo.png" alt="" width="379" height="353">
+        <span>
+          <strong>Congo Health Emergency</strong>
+          <small>{{ t.country[lang] }}</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="{{ t.openMenu[lang] }}">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="nav" aria-label="{{ t.mainNav[lang] }}">
+        <a href="index.html"{% if nav == "home" %} aria-current="page"{% endif %}>{{ t.home[lang] }}</a>
+        <a href="organisation.html"{% if nav == "organisation" %} aria-current="page"{% endif %}>{{ t.org[lang] }}</a>
+        <a href="action.html"{% if nav == "action" %} aria-current="page"{% endif %}>{{ t.action[lang] }}</a>
+        <a href="contact.html"{% if nav == "contact" %} aria-current="page"{% endif %}>{{ t.contact[lang] }}</a>
+        <a class="lang-switch" href="{{ altHref }}" hreflang="{{ otherLang }}" lang="{{ otherLang }}" aria-label="{{ t.langAria[lang] }}">{{ t.langLabel[lang] }}</a>
+      </nav>
+    </div>
+  </header>

@@ -1,0 +1,17 @@
+{
+  "skip":      { "fr": "Aller au contenu", "en": "Skip to content" },
+  "country":   { "fr": "CHEM · R.D. Congo", "en": "CHEM · DR Congo" },
+  "openMenu":  { "fr": "Ouvrir le menu", "en": "Open menu" },
+  "mainNav":   { "fr": "Navigation principale", "en": "Main navigation" },
+  "home":      { "fr": "Accueil", "en": "Home" },
+  "org":       { "fr": "L'organisation", "en": "Organisation" },
+  "action":    { "fr": "Notre action", "en": "Our work" },
+  "contact":   { "fr": "Contact", "en": "Contact" },
+  "langLabel": { "fr": "EN", "en": "FR" },
+  "langAria":  { "fr": "English version", "en": "Version française" },
+  "footerAbout": { "fr": "Organisation humanitaire médicale à but non lucratif. Apolitique, sans appartenance confessionnelle ni tribale.", "en": "Non-profit medical humanitarian organisation. Non-political, with no religious or tribal affiliation." },
+  "hq":        { "fr": "Siège", "en": "Head office" },
+  "address":   { "fr": "Avenue Saïo<br>\n          Quartier Ndendere, commune d'Ibanda<br>\n          Bukavu, Sud-Kivu<br>\n          R.D. Congo", "en": "Avenue Saïo<br>\n          Ndendere neighbourhood, Ibanda commune<br>\n          Bukavu, South Kivu<br>\n          DR Congo" },
+  "founded":   { "fr": "© CHEM · Constituée à Bukavu le 31 décembre 2021", "en": "© CHEM · Founded in Bukavu on 31 December 2021" },
+  "footerNav": { "fr": "Pied de page", "en": "Footer" }
+}

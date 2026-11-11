@@ -1,0 +1,32 @@
+{%- set root = "../" if lang == "en" else "" -%}
+{%- set otherLang = "fr" if lang == "en" else "en" -%}
+{%- set file = permalink | replace("en/", "") -%}
+{%- set altHref = ("../" + file) if lang == "en" else ("en/" + file) -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#0000b0">
+{%- if headExtra %}
+{{ headExtra | safe }}
+{%- endif %}
+  <link rel="icon" href="{{ root }}assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="{{ root }}css/style.css">
+  {%- set frUrl = site.url + "/" + ("" if file == "index.html" else file) %}
+  {%- set enUrl = site.url + "/en/" + ("" if file == "index.html" else file) %}
+  <link rel="canonical" href="{{ enUrl if lang == 'en' else frUrl }}">
+  <link rel="alternate" hreflang="fr" href="{{ frUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ enUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ frUrl }}">
+</head>
+<body>
+  <a class="skip" href="#contenu">{{ t.skip[lang] }}</a>
+{% include "header.njk" %}
+{{ content | safe }}
+{% include "footer.njk" %}
+  <script src="{{ root }}js/site.js"></script>
+</body>
+</html>

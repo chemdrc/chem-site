@@ -1,4 +1,5 @@
 (function () {
+  var EN = (document.documentElement.lang || "").indexOf("en") === 0;
   var btn = document.querySelector(".nav-toggle");
   var nav = document.querySelector("#nav");
   if (!btn || !nav) return;
@@ -6,7 +7,7 @@
   function setOpen(open) {
     nav.classList.toggle("is-open", open);
     btn.setAttribute("aria-expanded", open ? "true" : "false");
-    btn.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    btn.setAttribute("aria-label", open ? (EN ? "Close menu" : "Fermer le menu") : (EN ? "Open menu" : "Ouvrir le menu"));
   }
 
   btn.addEventListener("click", function () {

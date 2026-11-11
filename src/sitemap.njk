@@ -1,0 +1,18 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for p in collections.all %}
+{%- set file = p.data.permalink | replace("en/", "") %}
+{%- set path = "" if file == "index.html" else file %}
+{%- set fr = site.url + "/" + path %}
+{%- set en = site.url + "/en/" + path %}
+  <url>
+    <loc>{{ en if p.data.lang == "en" else fr }}</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ fr }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ en }}"/>
+  </url>
+{%- endfor %}
+</urlset>

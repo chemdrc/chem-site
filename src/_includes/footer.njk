@@ -1,0 +1,32 @@
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img src="{{ root }}assets/logo.png" alt="" width="72" height="67">
+        <p class="footer-name">Congo Health Emergency</p>
+        <p>{{ t.footerAbout[lang] }}</p>
+      </div>
+      <div>
+        <p class="footer-label">{{ t.hq[lang] }}</p>
+        <address>
+          {{ t.address[lang] | safe }}
+        </address>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul class="footer-links">
+          <li><a href="tel:+243821505083">+243 821 505 083</a></li>
+          <li><a href="tel:+243851505083">+243 851 505 083</a></li>
+          <li><a href="tel:+243998291126">+243 998 291 126</a></li>
+          <li><a href="mailto:congohealthemergency.drc@gmail.com">congohealthemergency.drc@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>{{ t.founded[lang] }}</p>
+      <nav aria-label="{{ t.footerNav[lang] }}">
+        <a href="organisation.html"{% if nav == "organisation" %} aria-current="page"{% endif %}>{{ t.org[lang] }}</a>
+        <a href="action.html"{% if nav == "action" %} aria-current="page"{% endif %}>{{ t.action[lang] }}</a>
+        <a href="contact.html"{% if nav == "contact" %} aria-current="page"{% endif %}>{{ t.contact[lang] }}</a>
+      </nav>
+    </div>
+  </footer>

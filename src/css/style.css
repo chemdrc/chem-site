@@ -666,3 +666,17 @@ address { font-style: normal; }
   a[href^="mailto:"]::after,
   a[href^="tel:"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
 }
+
+/* Bascule de langue FR / EN */
+.site-nav a.lang-switch {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--blue);
+}
+.site-nav a.lang-switch:hover { border-color: var(--blue); color: var(--red-text); }
+@media (max-width: 780px) {
+  .site-nav.is-open a.lang-switch { align-self: flex-start; margin-top: 0.6rem; }
+}
